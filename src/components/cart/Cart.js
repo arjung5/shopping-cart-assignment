@@ -9,8 +9,6 @@ import "./Cart.css";
 function Cart(props) {
   const cartData = useSelector((state) => state.getCartDetail.cartItems);
   const dispatch = useDispatch();
-
-  // Block background scroll when cart is open
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => (document.body.style.overflow = "unset");
@@ -117,5 +115,4 @@ function Cart(props) {
     </div>
   );
 }
-
 export default React.memo(Cart);

@@ -2,6 +2,7 @@ import React, { Suspense, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./Navbar.css";
+import logo from './logo.png';
 const Cart = React.lazy(() => import("../cart/Cart"));
 
 export default function Navbar() {
@@ -23,7 +24,7 @@ export default function Navbar() {
           <div className="app-block left">
             <Link to="/" className="app-logo" itemProp="url">
               <img
-                src="/static/images/logo.png"
+                src={logo}
                 srcSet="/static/images/logo_2x.webp 1.5x, /static/images/logo_2x.webp 2x"
                 alt="sabka-bazar-logo"
                 loading="lazy"
